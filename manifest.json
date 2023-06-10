@@ -1,10 +1,10 @@
 {
     "manifest_version": 1,
     "type": "theme",
-    "name": "Test-Theme",
+    "name": "测试主题",
     "slug": "test_theme",
     "description": "测试用的主题",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "author": [
         {
             "name": "沫烬染",
@@ -12,6 +12,7 @@
         }
     ],
     "injects": {
+        "renderer": "./renderer.js",
         "main": "./main.js",
         "preload": "./preload.js"
     }

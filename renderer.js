@@ -1,4 +1,4 @@
-(() => {
+export function onLoad() {
     const element = document.createElement("style");
     document.head.appendChild(element);
 
@@ -11,4 +11,6 @@
     test_theme.updateStyle((event, message) => {
         element.textContent = message;
     });
-})();
+
+    test_theme.rendererReady();
+}
