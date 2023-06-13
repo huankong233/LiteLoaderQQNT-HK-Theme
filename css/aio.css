@@ -1,0 +1,53 @@
+/* 输入框 */
+.aio .chat-input-area {
+  border-radius: 16px;
+  margin: 20px;
+  z-index: 9;
+  border: 1px solid var(--divider_standard);
+}
+
+/* 聊天界面更多面板 */
+.aio .side-panel {
+  backdrop-filter: brightness(120%) saturate(120%) blur(32px);
+  box-shadow: 0 4px 6px 0px rgb(0 0 0 / 5%) !important;
+}
+
+/* 频道输入框 */
+.aio-input-wrapper {
+  border-radius: 16px;
+  margin: 20px;
+  margin-bottom: 0;
+  z-index: 10;
+  border: 1px solid var(--divider_standard);
+  position: relative;
+  bottom: 40px;
+}
+
+/* 频道信息 */
+.ml-group {
+  margin-bottom: 15px;
+}
+
+@media (prefers-color-scheme: light) {
+  /* 聊天界面更多面板 */
+  .aio .side-panel {
+    background: #ffffff9f !important;
+  }
+
+  /* 输入框背景颜色 */
+  .aio .chat-input-area {
+    background: rgb(240, 240, 240);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  /* 聊天界面更多面板 */
+  .aio .side-panel {
+    background: #1717179f !important;
+  }
+
+  /* 输入框背景颜色 */
+  .aio .chat-input-area {
+    background: rgb(36, 36, 36);
+  }
+}

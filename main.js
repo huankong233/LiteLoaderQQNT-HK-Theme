@@ -2,8 +2,18 @@ const fs = require('fs')
 const path = require('path')
 const { BrowserWindow, ipcMain } = require('electron')
 
+// 获取当前有哪些css
 const cssPath = path.join(__dirname, 'css')
 const cssFiles = fs.readdirSync(cssPath)
+
+// 更新样式
+function updateStyle(webContents) {
+  cssFiles.forEach(cssFileName => {
+    const cssFilePath = path.join(cssPath, cssFileName)
+    const data = fs.readFileSync(cssFilePath, 'utf-8')
+    webContents.send('betterQQNT.HK_theme.updateStyle', cssFileName, data)
+  })
+}
 
 // 防抖函数
 function debounce(fn, time) {
@@ -14,16 +24,6 @@ function debounce(fn, time) {
       fn.apply(this, args)
     }, time)
   }
-}
-
-// 更新样式
-function updateStyle(webContents) {
-  let data = ''
-  cssFiles.forEach(cssFileName => {
-    const cssFilePath = path.join(cssPath, cssFileName)
-    data += fs.readFileSync(cssFilePath, 'utf-8')
-  })
-  webContents.send('betterQQNT.HK_theme.updateStyle', data)
 }
 
 // 监听CSS修改-开发时候用的

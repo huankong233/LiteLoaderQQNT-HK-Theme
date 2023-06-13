@@ -1,9 +1,14 @@
 export function onLoad() {
-  const element = document.createElement('style')
-  document.head.appendChild(element)
+  HK_theme.updateStyle((event, cssFileName, data) => {
+    const id = cssFileName.substring(0, cssFileName.lastIndexOf('.'))
+    let style = document.querySelector(`style[id="${id}"]`)
+    if (!style) {
+      style = document.createElement('style')
+      style.id = id
+      document.head.appendChild(style)
+    }
 
-  HK_theme.updateStyle((event, message) => {
-    element.textContent = message
+    style.textContent = data
   })
 
   HK_theme.rendererReady()
