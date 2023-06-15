@@ -28,6 +28,12 @@
   margin-bottom: 15px;
 }
 
+/* 频道慢速模式 */
+.bar {
+  background: rgb(27, 27, 27);
+  border-radius: 8px 8px 0 0;
+}
+
 @media (prefers-color-scheme: light) {
   /* 聊天界面更多面板 */
   .aio .side-panel {
