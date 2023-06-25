@@ -18,3 +18,8 @@
     background: #1717179f !important;
   }
 }
+
+/* 去除聊天界面的边框 */
+.chat-header {
+  border: none !important;
+}
