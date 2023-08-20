@@ -1,16 +1,25 @@
 {
-  "manifest_version": 1,
+  "manifest_version": 3,
   "type": "theme",
   "name": "HK主题",
-  "slug": "BetterQQNT-HK-Theme",
+  "slug": "LiteLoaderQQNT-HK-Theme",
   "description": "HK主题",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "author": [
     {
       "name": "huan_kong",
       "link": "https://github.com/huankong233"
     }
   ],
+  "repository": {
+    "repo": "huankong233/LiteLoaderQQNT-HK-Theme",
+    "branch": "v3",
+    "use_release": {
+      "tag": "latest",
+      "name": "LiteLoaderQQNT-MSpring-Theme.zip"
+    }
+  },
+  "platform": ["win32", "linux", "darwin"],
   "injects": {
     "renderer": "./renderer.js",
     "main": "./main.js",

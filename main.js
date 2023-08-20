@@ -11,7 +11,7 @@ function updateStyle(webContents) {
   cssFiles.forEach(cssFileName => {
     const cssFilePath = path.join(cssPath, cssFileName)
     const data = fs.readFileSync(cssFilePath, 'utf-8')
-    webContents.send('betterQQNT.HK_theme.updateStyle', cssFileName, data)
+    webContents.send('LiteLoader.HK_theme.updateStyle', cssFileName, data)
   })
 }
 
@@ -41,7 +41,7 @@ function watchCSSChange(webContents) {
 }
 
 function onLoad(plugin) {
-  ipcMain.on('betterQQNT.HK_theme.rendererReady', (event, message) => {
+  ipcMain.on('LiteLoader.HK_theme.rendererReady', (event, message) => {
     const window = BrowserWindow.fromWebContents(event.sender)
     updateStyle(window.webContents)
   })
