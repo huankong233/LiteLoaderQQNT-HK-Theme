@@ -40,20 +40,16 @@ function watchCSSChange(webContents) {
   })
 }
 
-function onLoad(plugin) {
-  ipcMain.on('LiteLoader.HK_theme.rendererReady', (event, message) => {
-    const window = BrowserWindow.fromWebContents(event.sender)
-    updateStyle(window.webContents)
-  })
-}
+ipcMain.on('LiteLoader.HK_theme.rendererReady', (event, message) => {
+  const window = BrowserWindow.fromWebContents(event.sender)
+  updateStyle(window.webContents)
+})
 
-function onBrowserWindowCreated(window, plugin) {
+module.exports.onBrowserWindowCreated = window => {
   window.on('ready-to-show', () => {
-    watchCSSChange(window.webContents)
+    const url = window.webContents.getURL()
+    if (url.includes('app://./renderer/index.html')) {
+      watchCSSChange(window.webContents, settingsPath)
+    }
   })
-}
-
-module.exports = {
-  onLoad,
-  onBrowserWindowCreated
 }
