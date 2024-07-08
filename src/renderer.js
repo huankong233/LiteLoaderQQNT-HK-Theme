@@ -1,5 +1,5 @@
 hk_theme.updateStyle((event, id, data) => {
-  const style = document.querySelector(`style[id="${id}"]`)
+  let style = document.querySelector(`style[id="${id}"]`)
 
   if (!style) {
     style = document.createElement('style')
