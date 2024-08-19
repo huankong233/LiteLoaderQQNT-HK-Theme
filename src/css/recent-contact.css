@@ -28,4 +28,8 @@
   .list-item:hover {
     background-color: rgba(255, 255, 255, 0.1) !important;
   }
+
+  .msg-content-container.container--self {
+    background: #262626 !important;
+  }
 }
