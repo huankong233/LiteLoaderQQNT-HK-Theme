@@ -4,8 +4,10 @@
   "type": "theme",
   "name": "HK主题",
   "slug": "LiteLoaderQQNT-HK-Theme",
-  "description": "HK主题",
+  "description": "自制轻量级主题,偏向深色",
   "version": "1.0.5",
+  "icon": "./res/icon.png",
+  "thumb": "./res/icon.png",
   "authors": [
     {
       "name": "huan_kong",
