@@ -57,3 +57,23 @@
     background: rgb(36, 36, 36);
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  div.personalization-bubble {
+    opacity: 0 !important;
+  }
+  .msg-content-container:not(.mix-message__container--market-face):not(.mix-message__container--pic):not(.container--self) {
+    background-color: #262626 !important;
+    color: white !important;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  div.personalization-bubble {
+    opacity: 0 !important;
+  }
+  .msg-content-container:not(.mix-message__container--market-face):not(.mix-message__container--pic):not(.container--self) {
+    background-color: white !important;
+    color: black !important;
+  }
+}
