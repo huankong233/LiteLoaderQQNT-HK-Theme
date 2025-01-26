@@ -12,20 +12,20 @@
 }
 
 /* 消息列表项圆角 */
-.recent-contact .viewport-list__inner .list-item {
+.recent-contact .viewport-list__inner .recent-contact-item {
   border-radius: 8px;
 }
 
 @media (prefers-color-scheme: light) {
   /* 消息列表项悬浮 */
-  .list-item:hover {
+  .recent-contact-item:hover {
     background-color: rgba(0, 0, 0, 0.1) !important;
   }
 }
 
 @media (prefers-color-scheme: dark) {
   /* 消息列表项悬浮 */
-  .list-item:hover {
+  .recent-contact-item:hover {
     background-color: rgba(255, 255, 255, 0.1) !important;
   }
 

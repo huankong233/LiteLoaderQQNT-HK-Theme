@@ -73,3 +73,7 @@
     color: white !important;
   }
 }
+
+.q-miracle-background {
+  display: none;
+}
